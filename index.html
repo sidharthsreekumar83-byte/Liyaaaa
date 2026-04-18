@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Liya 💖</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f0f0f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #ff4d6d;
+}
+
+p {
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #ff4d6d;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff2e55;
+}
+
+.message {
+    margin-top: 30px;
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+</style>
+</head>
+
+<body>
+
+<h1>For Liya 💖</h1>
+<p>Whenever you feel something… just tap one 💬</p>
+
+<div class="buttons">
+    <button onclick="showMsg('sad')">😔 Feeling sad</button>
+    <button onclick="showMsg('angry')">😡 Angry</button>
+    <button onclick="showMsg('overthinking')">😕 Overthinking</button>
+    <button onclick="showMsg('miss')">🥺 Missing me</button>
+    <button onclick="showMsg('unloved')">😞 Feeling unloved</button>
+</div>
+
+<div class="message" id="msg"></div>
+
+<script>
+const messages = {
+sad: "Hey Liya… I hate that you’re feeling like this. If I’m not there, just remember I care about you more than I show sometimes. You don’t deserve to feel alone.",
+
+angry: "I understand if you’re angry… maybe even at me. But I’m not walking away this time. Even if you’re upset, I’m still here.",
+
+overthinking: "I know your mind goes everywhere sometimes… but not everything you think is true. I’m here, and I’m trying to be better for us.",
+
+miss: "If you’re missing me… I probably miss you too. You’ve become a part of my life in a way I can’t ignore anymore.",
+
+unloved: "If you ever feel like I don’t care… I’m sorry for making you feel that way. Because the truth is, you matter to me more than I showed before."
+};
+
+function showMsg(type){
+let msg = document.getElementById("msg");
+msg.style.opacity = 0;
+
+setTimeout(()=>{
+msg.innerText = messages[type];
+msg.style.opacity = 1;
+},200);
+}
+</script>
+
+</body>
+</html>
